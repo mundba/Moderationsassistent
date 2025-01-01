@@ -1,5 +1,5 @@
 # Moderationsassistent
-Der Moderationsassistent ist ein Prototyp, der im Rahmen einer Masterarbeit entwickelt wurde. Er basiert auf dem Large Language Model Llama-3.1-8B-Instruct und bietet die folgenden Funktionen:
+Der Moderationsassistent ist ein Prototyp, der im Rahmen einer Masterarbeit entwickelt wurde. Er verwendet das Large Language Model Llama-3.1-8B-Instruct und umfasst die folgenden Funktionen:
 
 - Automatische Klassifizierung von Beiträgen in verschiedene Kategorien (Normal, Beleidigung, Rassismus, Sexismus, religiöser Hass, Werbung)
 - Extraktion problematischer Textpassagen aus als schädlich eingestuften Beiträgen
