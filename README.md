@@ -12,7 +12,8 @@ Installiere die requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
-Lade das LLM herunter
+Lade ein oder mehrere LLMs herunter
+https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF
 Lade einen Datensatz herunter
 # Lizenz
 # Autor
