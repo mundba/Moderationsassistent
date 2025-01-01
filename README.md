@@ -18,10 +18,10 @@ pip install -r requirements.txt
 
 Hinweis: der Name des heruntergeladenen LLMs muss mit dem in der `llm_classification.py` übereinstimmen 
 
-4. Lade einen oder mehrere Datensätze herunter
-**RP-Crowd-1.csv:** https://github.com/Dennis1989/RP-Mod-RP-Crowd/tree/main/Dataset/Text-Data
-**gahd.csv:** https://github.com/jagol/gahd
-**GermEval21_TrainData.csv:** https://github.com/germeval2021toxic/SharedTask/tree/main/Data%20Sets
+4. Lade einen oder mehrere Datensätze herunter  
+**RP-Crowd-1.csv:** https://github.com/Dennis1989/RP-Mod-RP-Crowd/tree/main/Dataset/Text-Data  
+**gahd.csv:** https://github.com/jagol/gahd  
+**GermEval21_TrainData.csv:** https://github.com/germeval2021toxic/SharedTask/tree/main/Data%20Sets  
 
 Hinweis: der Name des heruntergeladenen Datensatzes muss mit dem in der `import_data.py` übereinstimmen 
 
