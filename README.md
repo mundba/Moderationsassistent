@@ -7,6 +7,7 @@ Der Moderationsassistent ist ein Prototyp, der im Rahmen einer Masterarbeit entw
 Klone das Repository  
 ```bash
 git clone https://github.com/mundba/Moderationsassistent.git
+```
 Installiere die requirements.txt  
 `pip install -r requirements.txt`  
 Lade das LLM herunter
