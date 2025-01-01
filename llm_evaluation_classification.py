@@ -5,6 +5,17 @@ import time
 
 
 def start_evaluation_identification(comments_per_category, model_index):
+    """ 
+   Führt die Evaluierung durch, indem eine bestimmte Anzahl von Kommentaren klassifiziert wird.
+   
+   Args:
+       comments_per_category (int): Anzahl der Kommentare pro Kategorie (schädlich/nicht schädlich)
+       model_index (int): Index des zu verwendenden Modells
+       
+   Returns:
+       None: Ergebnisse werden an die calculation_evaluation() Funktion weitergeleitet
+   """
+    
     start_time = time.time()
     df = gahd()
 
@@ -35,6 +46,18 @@ def start_evaluation_identification(comments_per_category, model_index):
     calculation_evaluation(result_df, number_comments, start_time)
 
 def calculation_evaluation(result_df, number_comments, start_time):
+    """
+   Berechnet Evaluierungsmetriken für die Klassifizierung.
+   
+   Args:
+       result_df (DataFrame): DataFrame mit den Klassifizierungsergebnissen
+       number_comments (int): Gesamtanzahl der klassifizierten Kommentare 
+       start_time (float): Startzeitpunkt der Evaluierung
+       
+   Returns:
+       None: Speichert die Ergebnisse als Excel Datei
+   """
+    
     number_toxic_comments = number_comments/2
     number_non_toxic_comments = number_comments/2
     

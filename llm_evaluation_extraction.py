@@ -4,6 +4,16 @@ import pandas as pd
 import time
 
 def start_evaluation(comment_count, model_index):
+    """
+    Führt die Extraktion der schädlichen Begriffe für eine bestimmte Anzahl an Kommentaren durch.
+   
+    Args:
+       comment_count (int): Anzahl der zu analysierenden Kommentare
+       model_index (int): Index des zu verwendenden LLM
+   
+   Returns:
+       None: Ergebnisse werden in Excel-Datei gespeichert
+   """
     start_time = time.time()
     df = input_rp_phrases()
 
@@ -27,6 +37,17 @@ def start_evaluation(comment_count, model_index):
 
 
 def calculation_evaluation(result_df, counter, start_time):
+    """
+    Berechnet Evaluierungsmetriken für die Extraktion der schädlichen Begriffe.
+   
+    Args:
+       result_df (DataFrame): DataFrame mit den Extraktionsergebnissen
+       counter (int): Anzahl der bisher verarbeiteten Kommentare
+       start_time (float): Startzeitpunkt der Evaluierung
+   
+    Returns:
+       None: Speichert Ergebnisse in einer xlsx Datei
+    """
     result_df = result_df.head(counter)
 
     max_processing_time = result_df["processing_time"].max()

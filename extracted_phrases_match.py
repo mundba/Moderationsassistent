@@ -8,12 +8,31 @@ selected_df["llm"] = selected_df["llm"].str.lower().str.strip()
 selected_df["person"] = selected_df["person"].str.lower().str.strip()
 
 def count_common_words(row):
+   """
+   Zählt die gemeinsamen Wörter zwischen dem LLM und der eigenständigen Annotierung in einer Zeile.
+   
+   Args:
+       row (Series): Die zu prüfende Zeile mit den Kommentaren
+       
+   Returns:
+       int: Anzahl der Wörter, die in beiden Kommentarspalten vorkommen
+   """
    llm_words = set(row["llm"].split(", "))
    person_words = set(row["person"].split(", "))
    common_words = llm_words.intersection(person_words)
    return len(common_words)
 
 def count_total_words(row):
+   """
+   Zählt die Gesamtanzahl der Wörter für das LLM und der eigenständigen Annotierung.
+   
+   Args:
+       row (Series): Die zu prüfende Zeile mit den Kommentaren
+       
+   Returns:
+       tuple: (Anzahl der vom LLM annotierten Wörter, Anzahl menschlich annotierten Wörter)
+   """
+      
    llm_words = set(row["llm"].split(", "))
    person_words = set(row["person"].split(", "))
    return len(llm_words), len(person_words)

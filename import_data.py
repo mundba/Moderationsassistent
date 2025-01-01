@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 
+# Diese Klasse enthält alle Funktionen zum Einlesen verschiedener Datensätze für die Analyse von Beiträgen und Kommentaren
 
 def input_comments_export2():
     

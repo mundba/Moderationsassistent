@@ -3,6 +3,16 @@ import time
 
 
 def select_prompt(selected_prompt, content):
+    """
+    Wählt einen vordefinierten Prompt für die Klassifizierung aus.
+   
+    Args:
+       selected_prompt (int): Index des ausgewählten Prompts
+       content (str): Der zu analysierende Kommentar
+       
+    Returns:
+       str: Der mit dem Kommentar gefüllte Prompt
+   """
     prompt_list = [
         f"""
         <|begin_of_text|><|start_header_id|>system<|end_header_id|>
@@ -100,6 +110,15 @@ def select_prompt(selected_prompt, content):
     return prompt_list[selected_prompt]
 
 def select_model(selected_model):
+    """
+    Wählt ein vorhandenes LLM aus.
+   
+    Args:
+       selected_model (int): Index des ausgewählten Modells
+       
+    Returns:
+       str: Der Dateiname des ausgewählten Modells
+   """
     model_list = [
         "Meta-Llama-3.1-8B-Instruct-Q6_K.gguf", # 0
         "Meta-Llama-3-8B-Instruct-abliterated-v3_q6.gguf" #1
@@ -108,6 +127,17 @@ def select_model(selected_model):
 
 
 def processing_content(content, select_model_index, select_prompt_index):
+    """
+    Verarbeitet einen Kommentar mit dem ausgewählten Modell und Prompt.
+    
+    Args:
+        content (str): Der zu analysierende Kommentar
+        select_model_index (int): Index des zu verwendenden Modells
+        select_prompt_index (int): Index des zu verwendenden Prompts
+        
+    Returns:
+        tuple: (Klassifizierungsergebnis, Verarbeitungszeit in Sekunden)
+    """
     start_time = time.time()
 
     model_path = select_model(select_model_index)
