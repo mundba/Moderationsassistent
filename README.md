@@ -8,8 +8,10 @@ Klone das Repository
 ```bash
 git clone https://github.com/mundba/Moderationsassistent.git
 ```
-Installiere die requirements.txt  
-`pip install -r requirements.txt`  
+Installiere die requirements.txt
+```bash
+pip install -r requirements.txt
+```
 Lade das LLM herunter
 Lade einen Datensatz herunter
 # Lizenz
