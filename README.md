@@ -5,7 +5,8 @@ Der Moderationsassistent ist ein Prototyp, der im Rahmen einer Masterarbeit entw
 - Extraktion problematischer Textpassagen aus als schädlich eingestuften Beiträgen
 # Installation
 Klone das Repository  
-```python git clone https://github.com/mundba/Moderationsassistent.git```  
+```bash
+git clone https://github.com/mundba/Moderationsassistent.git
 Installiere die requirements.txt  
 `pip install -r requirements.txt`  
 Lade das LLM herunter
