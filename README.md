@@ -16,14 +16,14 @@ pip install -r requirements.txt
 **Meta-Llama-3.1-8B-Instruct-Q6_K.gguf:** https://huggingface.co/bartowski/Meta-Llama-3.1-8B-Instruct-GGUF/tree/main  
 **Meta-Llama-3-8B-Instruct-abliterated-v3_q6.gguf:** https://huggingface.co/failspy/Meta-Llama-3-8B-Instruct-abliterated-v3-GGUF/tree/main
 
-Hinweis: der Name des heruntergeladenen LLMs muss mit dem in der `llm_classification.py` übereinstimmen 
+Hinweis: Der Name des heruntergeladenen LLMs muss mit dem in der `llm_classification.py` übereinstimmen 
 
 4. Lade einen oder mehrere Datensätze herunter  
 **RP-Crowd-1.csv:** https://github.com/Dennis1989/RP-Mod-RP-Crowd/tree/main/Dataset/Text-Data  
 **gahd.csv:** https://github.com/jagol/gahd  
 **GermEval21_TrainData.csv:** https://github.com/germeval2021toxic/SharedTask/tree/main/Data%20Sets  
 
-Hinweis: der Name des heruntergeladenen Datensatzes muss mit dem in der `import_data.py` übereinstimmen 
+Hinweis: Der Name des heruntergeladenen Datensatzes muss mit dem in der `import_data.py` übereinstimmen 
 
 # Anwendung  
 Die `llm_classification.py` stellt die Main Klasse dieses Projekts dar.  
@@ -34,7 +34,7 @@ Setze `select_model_index` auf 1 für das LLM Meta-Llama-3-8B-Instruct-abliterat
 Setze `select_prompt_index` auf 0 für den Prompt der die Kommentare klassifiziert  
 Setze `select_prompt_index` auf 0 für den Prompt der die schädlichen Begriffe aus dem Kommentar extrahiert  
 
-Zur Ausführung der Evaluation mit der Klasse `llm_evaluation_classification.py` muss in der Methode `start_evaluation_identification(comments_per_category, model_index)` die Variable `df` auf den jeweiligen Datensatz, der eingelesen werden soll geändert werden. Im Code wird derzeit der GAHD Datensatz eingelsen, `df = gahd()`
+Zur Ausführung der Evaluation mit der Klasse `llm_evaluation_classification.py` muss in der Methode `start_evaluation_identification(comments_per_category, model_index)` die Variable `df` auf den jeweiligen Datensatz, der eingelesen werden soll, geändert werden. Im Code wird derzeit der GAHD Datensatz eingelsen, `df = gahd()`
 
 # Lizenz
 MIT License
